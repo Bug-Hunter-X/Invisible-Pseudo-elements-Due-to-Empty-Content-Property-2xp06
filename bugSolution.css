@@ -1,0 +1,10 @@
+The solution involves replacing the empty string in the `content` property with a valid value. This makes the pseudo-element visible.
+
+```css
+div::before {
+  content: " "; /* or \20; or "some text"; or url(image.png); */
+  /* other styles */
+}
+```
+
+Using `" "`, a non-breaking space, is often preferred for visual purposes when you don't need to display text or an image. This will give the pseudo-element a small amount of width and height allowing other styles to take effect.
