@@ -1,0 +1,10 @@
+The following CSS code uses a pseudo-element selector (::before or ::after) that is not correctly combined with content property. This leads to no visible content being displayed even though the pseudo-element is technically applied.
+
+```css
+div::before {
+  content: '';
+  /* other styles */
+}
+```
+
+The problem lies in using an empty string ('') for the content property.  While not causing a syntax error, it results in nothing being displayed. To fix it, you need to specify actual content, even if it's a non-breaking space to make sure the pseudo-element has a size.
